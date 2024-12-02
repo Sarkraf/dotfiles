@@ -15,7 +15,9 @@ alias aliases="code ~/.aliases"
 
 alias rs="rails s"
 alias gph= "gp heroku master"
+
 alias gpo="gp origin $(set_git_current_branch)"
+alias glo="gl origin $(set_git_current_branch)"
 
 
 
