@@ -15,10 +15,12 @@ alias aliases="code ~/.aliases"
 
 alias rs="rails s"
 alias gph= "gp heroku master"
-alias gpo="gp origin $(set_git_current_branch)"
 
 
 
-set_git_current_branch() {
+find_git_current_branch() {
     git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD
 }
+
+alias gpo="gp origin $(find_git_current_branch)"
+alias glo="gl origin $(find_git_current_branch)"
