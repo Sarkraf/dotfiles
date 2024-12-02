@@ -20,8 +20,8 @@ alias gpo="gp origin $(git_current_branch)"
 
 alias maj="sudo apt-get update && sudo apt-get upgrade"
 
-alias cb="$(git_current_branch)"
+alias cb="echo $(gfd)"
 
-git_current_branch() {
+gfd() {
     git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD
 }
