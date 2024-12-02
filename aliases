@@ -9,3 +9,13 @@ alias serve='ruby -run -e httpd . -p 8000' # Or python -m SimpleHTTPServer :)
 alias stt="echo 'Launching VS Code instead of Sublime Text... (cf ~/.aliases)' && code ."
 
 alias test="echo test"
+
+alias zshrc="code ~/.zshrc"
+alias aliases="code ~/.aliases"
+alias what-is-my-name="echo Master"
+alias wimname="what-is-my-name"
+alias rs="rails s"
+alias gph= "gp heroku master"
+alias gpo="echo $(git_current_branch) && gp origin $(git_current_branch)"
+
+alias maj="sudo apt-get update && sudo apt-get upgrade"
