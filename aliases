@@ -16,6 +16,6 @@ alias what-is-my-name="echo Master"
 alias wimname="what-is-my-name"
 alias rs="rails s"
 alias gph= "gp heroku master"
-alias gpo="zsh && gp origin $(git_current_branch)"
+alias gpo="echo $(git_current_branch) && gp origin $(git_current_branch)"
 
 alias maj="sudo apt-get update && sudo apt-get upgrade"
