@@ -16,12 +16,11 @@ alias what-is-my-name="echo Master"
 alias wimname="what-is-my-name"
 alias rs="rails s"
 alias gph= "gp heroku master"
-alias gpo="gp origin $(git_current_branch)"
+alias gpo="gp origin $(set_git_current_branch)"
 
 alias maj="sudo apt-get update && sudo apt-get upgrade"
 
-alias cb="echo $(gfd)"
 
-gfd() {
+set_git_current_branch() {
     git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD
 }
