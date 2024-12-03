@@ -59,6 +59,3 @@
 
 [init]
   defaultBranch = master
-[user]
-	email = your mail
-	name = your name
