@@ -1,12 +1,10 @@
 {
-  "[python]": {
-    "editor.bracketPairColorization.enabled": false,
-    "editor.guides.bracketPairs": false,
-    "editor.tabSize": 4
-  },
+  // ----- Éditeur -----
   "editor.bracketPairColorization.enabled": true,
+  "editor.cursorStyle": "block",
   "editor.detectIndentation": false,
   "editor.fontSize": 14,
+  "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -18,23 +16,23 @@
   "editor.showFoldingControls": "always",
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
-  "emmet.includeLanguages": {
-    "erb": "html"
-  },
-  "emmet.triggerExpansionOnTab": true,
-  "explorer.confirmDelete": false,
+  // ----- Fichiers -----
+  "files.autoSave": "onFocusChange",
+  "files.hotExit": "off",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
     "__pycache__": true,
-    "_site": true,
+    "**/.egg-info": true,
     ".asset-cache": true,
     ".bundle": true,
     ".ipynb_checkpoints": true,
     ".pytest_cache": true,
     ".sass-cache": true,
-    ".svn": true,
-    "**/.DS_Store": true,
-    "**/.egg-info": true,
-    "**/.git": true,
+    "_site": true,
     "build": true,
     "coverage": true,
     "dist": true,
@@ -43,10 +41,6 @@
     "public/packs": true,
     "tmp": true
   },
-  "files.hotExit": "off",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/audits/**": true,
     "**/coverage/**": true,
@@ -55,80 +49,77 @@
     "**/tmp/**": true,
     "**/vendor/**": true
   },
-  "notebook.diff.ignoreMetadata": true,
-  "notebook.lineNumbers": "on",
-  "notebook.markup.fontSize": 13,
-  "python.defaultInterpreterPath": "~/.pyenv/shims/python",
-  "python.formatting.provider": "yapf",
-  "python.languageServer": "Pylance",
-  "python.linting.enabled": false,
-  "python.linting.flake8Enabled": false,
-  "python.linting.pylintEnabled": false,
-  "python.terminal.activateEnvironment": false,
-  "ruby.lint": {
-    "rubocop": true
-  },
-  "search.exclude": {
-    // Inherits all glob patterns from the `files.exclude` setting.
-    "**/.venv": true
-  },
-  "telemetry.telemetryLevel": "off",
+  // ----- Fenêtre & UI -----
   "window.restoreWindows": "none",
   "window.newWindowDimensions": "maximized",
+  "workbench.colorTheme": "Red One Dark Pro | Mirage Bordered",
   "workbench.editor.enablePreview": true,
-  "workbench.iconTheme": "vscode-great-icons",
-  "workbench.settings.editor": "",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.openDefaultSettings": true,
   "workbench.settings.useSplitJSON": true,
   "workbench.startupEditor": "newUntitledFile",
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.formatOnSave": true,
+  // ----- Explorer -----
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  // ----- Git -----
   "git.autofetch": true,
-  "launch": {
-    "configurations": []
+  // ----- Emmet -----
+  "emmet.includeLanguages": {
+    "erb": "html"
   },
-  "settingsSync.ignoredSettings": [
-
-  ],
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
+  "emmet.triggerExpansionOnTab": true,
+  // ----- Python -----
+  "[python]": {
+    "editor.bracketPairColorization.enabled": false,
+    "editor.guides.bracketPairs": false,
+    "editor.tabSize": 4
   },
-  "[css]": {
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": true,
+  "python.defaultInterpreterPath": "~/.pyenv/shims/python",
+  "python.languageServer": "Pylance",
+  "python.terminal.activateEnvironment": false,
+  // ----- Ruby / ERB -----
+  "ruby.lint": {
+    "rubocop": true
   },
-  "html-css-class-completion.remoteStyleSheets": [
-      "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-  ],
-  "tabnine.experimentalAutoImports": true,
-  "settingsSync.ignoredExtensions": [
-
-  ],
-  "liveServer.settings.port": 5500,
-  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-  "liveServer.settings.ignoreFiles": [
-
-    ".vscode/**",
-    // "**/*.scss",
-    "**/*.sass",
-    "**/*.ts"
-  ],
-  "liveServer.settings.wait": 500,
-  "liveServer.settings.root": "",
-  "editor.cursorStyle": "block",
   "[erb]": {
     "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
-  "explorer.compactFolders": false,
-  "files.autoSave": "afterDelay",
+  // ----- JavaScript / CSS -----
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // intelisense keep only extension erb snippets
-
-
+  "[css]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true
+  },
+  // ----- Notebook -----
+  "notebook.diff.ignoreMetadata": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 13,
+  // ----- Search -----
+  "search.exclude": {
+    "**/.venv": true
+  },
+  // ----- Copilot -----
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false
+  },
+  // ----- Live Server -----
+  "liveServer.settings.port": 5500,
+  "liveServer.settings.wait": 500,
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.sass",
+    "**/*.ts"
+  ],
+  // ----- Sécurité & Télémétrie -----
+  "telemetry.telemetryLevel": "off",
+  "security.workspace.trust.untrustedFiles": "open",
+  // ----- Extensions -----
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.lightIndicatorStyleLineWidth": 8
 }
